@@ -33,6 +33,26 @@ clinical report - Automatic saving of analysis results
 6.  Results are displayed and saved automatically
 
 ------------------------------------------------------------------------
+## ⚠️ Python Version Requirement
+
+This project is tested and verified using:
+
+**Python 3.10**
+
+Do NOT use the latest Python versions (3.12+), as compatibility issues may occur with:
+
+- PyTorch
+- Transformers
+- Ultralytics YOLO
+- Some CUDA builds
+
+Recommended setup:
+
+```
+python 3.10.x
+```
+
+---
 
 ## 📂 Repository Structure
 
@@ -40,6 +60,10 @@ clinical report - Automatic saving of analysis results
 DentoVision-AI/
 │
 ├── app.py
+│
+├── utils/
+│   ├── __init__.py
+│   └── yolo_heatmap.py
 │
 ├── YOLO_Model/
 │   └── Issues.pt
@@ -87,6 +111,24 @@ Classes: - Cavity - Fillings - Impacted Tooth - Implant - Normal
     -   Treatment pathways
     -   Professional disclaimer
 
+
+## 📦 Important: utils Package Setup
+
+Move helper files (such as `yolo_heatmap.py`) inside the folder:
+
+```
+utils/
+```
+
+Create an empty file inside that folder:
+
+```
+utils/__init__.py
+```
+
+This tells Python that `utils` is a package.
+
+Without this file, imports may fail in some environments.
 ------------------------------------------------------------------------
 
 ## 🖥 GUI Features
