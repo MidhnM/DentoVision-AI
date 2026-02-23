@@ -39,7 +39,7 @@ clinical report - Automatic saving of analysis results
 ```
 DentoVision-AI/
 │
-├── main.py
+├── app.py
 │
 ├── YOLO_Model/
 │   └── Issues.pt
@@ -98,6 +98,12 @@ Classes: - Cavity - Fillings - Impacted Tooth - Implant - Normal
 -   AI-generated structured report
 -   Auto-save image + text report
 
+<h2>🖥 GUI Preview</h2>
+
+<p align="center">
+  <img src="Images/loading_screem.png" width="45%"/>
+  <img src="Images/gui_screenshot.png" width="45%"/>
+</p>
 ------------------------------------------------------------------------
 
 ## 💾 Output Files
@@ -108,6 +114,9 @@ outputs/
 
 Generated files: - yolo_analysis.jpg - analysis_report.txt
 
+<p align="center">
+  <img src="Images/Output.png" width="700"/>
+</p>
 ------------------------------------------------------------------------
 
 ## ⚙️ Installation Guide
@@ -118,14 +127,19 @@ git clone https://github.com/MidhnM/DentoVision-AI.git cd
 DentoVision-AI
 
 ### 2. Create Virtual Environment
-
-python -m venv venv venv`\Scripts`{=tex}`\activate`{=tex}
-
+```
+python -m venv venv
+venv\Scripts\activate     # Windows
+```
 ### 3. Install Dependencies
-
+```
+pip install -r requirements.txt
+```
+If you don’t have requirements.txt, install manually:
+```
 pip install torch torchvision transformers ultralytics opencv-python
 pillow numpy google-generativeai
-
+```
 ### 4. Set Environment Variable for Gemini
 
 set GEMINI_API_KEY=your_api_key_here
@@ -167,6 +181,28 @@ It is NOT a replacement for professional dental diagnosis.\
 Always consult a licensed dental professional.
 
 ------------------------------------------------------------------------
+## 📦 Pretrained Model Access
+
+Due to dataset licensing and medical data restrictions, 
+the trained model weights are not included in this repository.
+
+If you require access to the pretrained models for:
+
+- Academic research
+- Clinical validation
+- Collaboration
+- Commercial licensing
+
+Please contact:
+
+📧 **midhunedappon@gmail.com**
+
+Include:
+- Your affiliation
+- Intended use case
+- Research / commercial purpose
+
+---
 
 ## 👨‍💻 Author
 
