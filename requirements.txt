@@ -1,0 +1,9 @@
+torch
+torchvision
+torchaudio
+transformers
+ultralytics
+pillow
+opencv-python
+numpy
+google-genai
